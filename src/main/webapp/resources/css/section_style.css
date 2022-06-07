@@ -1,0 +1,114 @@
+section{
+    overflow: scroll;
+    height: 1000px;
+}
+
+section .section_wrapper{
+    background-image: linear-gradient(45deg, rgba(251, 243, 252, 0.95) 0%, rgba(231, 240, 245, 0.91) 100%);
+    position: relative;
+    display: flex;
+    /*    for test*
+    will be deleted
+     */
+    height: 35vh;
+    width: 90vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2%;
+    margin-bottom: 3%;
+}
+section .section_top{
+    position: absolute;
+    /*    for test*
+    will be deleted
+    */
+    height: 3vh;
+    width: 95%;
+}
+
+.section_top div{
+    display: inline-block;
+    text-decoration: none;
+    align-items: center;
+}
+.section_top .section_ui{
+/*
+ * @BUG!!!!
+ *
+ */
+
+}
+.section_top .section_text{
+    font-family: 隶书;
+    color: red;
+    font-weight: 800;
+    text-align: left;
+    text-anchor: middle;
+}
+
+.section_extra{
+    position: absolute;
+    left:50%;
+    top:40%;
+}
+
+.section_main{
+    position: absolute;
+    width: 95%;
+    top:5vh;
+    height: 31vh;;
+}
+
+.section_main *{
+    border-radius: 5%;
+}
+.section_left{
+    display: flex;
+    position: absolute;
+    height:98%;
+    width: 48%;
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+.section_right{
+    display: flex;
+    position: absolute;
+    height: 98%;
+    width: 48%;
+    left: 75%;
+    transform: translateX(-50%);
+}
+
+section .tag{
+    position: absolute;
+    height: 48%;
+    width: 100%;
+    background-color: #faf0fa;
+    color: black;
+    background-image: linear-gradient(45deg, #f5e5f5 0%, #deecf1 100%);
+    align-items: flex-start;
+}
+
+.tag *{
+    position: absolute;
+    left: 5%;
+    width: 95%;
+    background: none;
+}
+
+.tag .tag_title{
+    top:3%;
+    font-family: 华文新魏;
+    font-size: 100%;
+}
+.tag .tag_text{
+    top:20%;
+    font-family: 楷体;
+    font-size: 20%;
+}
+.tag .tag_time{
+    bottom: 5%;
+    font-family: Arial;
+    font-size: 16%;
+}

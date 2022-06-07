@@ -1,0 +1,30 @@
+footer {
+    /*//固定到底端*/
+    position: fixed;
+    bottom: 0;
+    background-color: #00c6e9;
+    background-image: linear-gradient(135deg, #e117e8 0%, #96006b 100%);
+    height: 10vh;
+    width: 100vw;
+}
+
+footer .footer-navi div {
+    display: inline-block;
+    width: 20vw;
+    height: 10vw;
+    transform: translate(30%,3vh);
+    text-align: center;
+    text-decoration: none;
+}
+
+footer .footer-navi span{
+    color: white;
+}
+
+footer .footer_href a{
+    display: block;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+}
+

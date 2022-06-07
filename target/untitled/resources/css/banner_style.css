@@ -1,0 +1,34 @@
+
+#btn_list li {
+    background-color: #0093E9;
+    background-image: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%);
+    width: 10vw;
+    opacity: 0;
+}
+
+#img_container {
+    width: 80vw;
+    height:80vw;
+    border: 2px dashed red;
+    position: relative;
+    top: 1vh;
+    left: 10vw;
+    /*transform: translate(-50%, -25%);*/
+    overflow: hidden;
+}
+
+#img_container span {
+    /*border: red 1px solid;*/
+    position: absolute;
+    /*float: left; !*把所有图片放在同一个位置*!*/
+    width: 80vw;
+    height: 80vw;
+    top: 0;
+    left: 0;
+    /*transition-duration: 0.5s; !*设置过渡时间*!*/
+    opacity: 0; /*把所有图片变透明*/
+}
+
+#img_container .on {
+    opacity: 1 !important;
+}

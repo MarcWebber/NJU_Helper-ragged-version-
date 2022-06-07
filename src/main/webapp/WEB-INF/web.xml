@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<!--
+  - This is the Cocoon web-app configurations file
+  -
+  - $Id$
+  -->
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  <!-- Servlet Filters ================================================ -->
+
+  <!--
+    - Declare a filter for multipart MIME handling
+    -->
+  <!-- authors -->
+  <context-param>
+    <param-name>Authors</param-name>
+    <param-value>陈锦华，张朱昊，吴昊一，徐子豪</param-value>
+  </context-param>
+
+  <!-- login in -->
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>com.el.Servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.el.Servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>NewsServlet</servlet-name>
+    <servlet-class>com.el.Servlet.NewsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewsServlet</servlet-name>
+    <url-pattern>/NewsServlet</url-pattern>
+  </servlet-mapping>
+
+<!--  to get the information of a user and load it-->
+  <servlet>
+    <servlet-name>getUserInfo</servlet-name>
+    <servlet-class>com.el.Servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>getUserInfo</servlet-name>
+    <url-pattern>/setUserInfo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>SessionServlet</servlet-name>
+    <servlet-class>com.el.Servlet.SessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionServlet</servlet-name>
+    <url-pattern>/setSession</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>check</servlet-name>
+    <servlet-class>com.el.Servlet.RedirectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>check</servlet-name>
+    <url-pattern>/check</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LectureServlet</servlet-name>
+    <servlet-class>com.el.Servlet.LectureServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LectureServlet</servlet-name>
+    <url-pattern>/LectureServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ActivityServlet</servlet-name>
+    <servlet-class>com.el.Servlet.ActivityServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActivityServlet</servlet-name>
+    <url-pattern>/ActivityServlet</url-pattern>
+  </servlet-mapping>
+
+<!--  set the auto invalidation time of the session, 15 minutes-->
+  <session-config>
+    <session-timeout>15</session-timeout>
+  </session-config>
+
+  <!-- URL space mappings ============================================= -->
+
+  <!--
+    - Cocoon handles all the URL space assigned to the webapp using its sitemap.
+    - It is recommended to leave it unchanged. Under some circumstances though
+    - (like integration with proprietary webapps or servlets) you might have
+    - to change this parameter.
+    -->
+<!--  <servlet-mapping>-->
+<!--    <servlet-name>DispatcherServlet</servlet-name>-->
+<!--    <url-pattern>/*</url-pattern>-->
+<!--  </servlet-mapping>-->
+
+</web-app>

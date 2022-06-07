@@ -1,0 +1,32 @@
+
+#container{
+    top: 14vh;
+    /* position: absolute; */
+    width: 100%;
+    height: auto;
+    bottom: 10vh;
+}
+
+.pure_link{
+   text-decoration: none;
+}
+
+.new_title{
+   color: black;
+   font-weight: bolder;
+   font-size:larger;
+}
+
+.new_text{
+    color: black;
+}
+
+.new_time{
+    color: darkgray;
+    font-size: smaller;
+}
+
+.new_hr{
+    color: yellowgreen;
+    border: 1px dashed;
+}
